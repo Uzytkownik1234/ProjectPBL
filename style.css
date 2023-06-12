@@ -1,0 +1,116 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap');
+* {
+    font-family: 'Instrument Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+:root {
+    --main-color: #97e9ff;
+    --text-color: #171427;
+    --bg-color: #fff;
+}
+img {
+    width: 100%;
+}
+body {
+    background: var(--bg-color);
+    background-image: url("wall.jpg");
+}
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--bg-color);
+    box-shadow: 0 1px 3px hsla(0, 2%, 9%, 0.1);
+    z-index: 100;
+}
+.container {
+    max-width: 1268px;
+    margin: auto;
+    width: 100%;
+    background: var(--bg-color);
+    padding-left: 90px;
+    padding-right: 90px;
+    padding-bottom: 60px;
+    margin-bottom: 7rem;
+}
+/* Nav */
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+/* Logo */
+.logo {
+    font-size: 2rem;
+    color: var(--text-color);
+    font-weight: 600;
+    cursor: default;
+}
+#logo-icon {
+    font-size: 2rem;
+}
+/* Section */
+section {
+    padding: 4rem 0 3rem;
+}
+.ask {
+    padding-top: 3rem;
+    margin-top: 7rem;
+}
+/* Content */
+.r-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(700px, auto));
+    gap: 2rem;
+}
+/* Product */
+.searchBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-color);
+    /*border:solid 1px #171427;*/
+    height: 100px;
+}
+.searchBar input{
+    font-size: 1.5rem;
+    height: 50px;
+    width: 650px;
+    padding: 10px;
+    border:solid 1px #171427;
+    border-right: none;
+}
+.searchBar input:focus{
+    outline: none;
+}
+#submitSearch{
+    font-size: 1.5rem;
+    height: 50px;
+    width: 50px;
+    background-color: var(--bg-color);
+    border:solid 1px #171427;
+    border-left:none;
+    cursor: pointer;
+}
+.chatBox {
+    position: relative;
+    background: var(--bg-color);
+    min-height: 10px;
+    overflow: hidden;
+    font-size: 1.2rem;
+    padding: 10px;
+    white-space: pre-wrap;
+
+}
