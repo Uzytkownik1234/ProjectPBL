@@ -39,6 +39,10 @@ submitButton.addEventListener("click", clearInput)
 const submitButton = document.querySelector('#submitSearch');
 const outputElement = document.querySelector('#output');
 const inputElement = document.querySelector('input');
+const chatBox = document.querySelector('.chatBox');
+const load = document.querySelector('.load')
+
+load.classList.add('hidden');
 
 async function getMessage() {
   console.log('clicked');
@@ -58,6 +62,11 @@ async function getMessage() {
     const data = await response.json();
     console.log(data);
     outputElement.textContent = data.message;
+    if (data.message != ''){
+      chatBox.classList.add('active');
+      submitButton.classList.remove('hidden');
+      load.classList.add('hidden');
+    }
   } catch (error) {
     console.error(error);
   }
@@ -68,5 +77,9 @@ submitButton.addEventListener('click', getMessage);
 function clearInput() {
   inputElement.value = '';
 }
-
+function hideButton() {
+  submitButton.classList.add('hidden');
+  load.classList.remove('hidden');
+}
 submitButton.addEventListener('click', clearInput);
+submitButton.addEventListener('click', hideButton);

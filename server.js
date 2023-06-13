@@ -31,7 +31,7 @@ app.post('/get-message', async (req, res) => {
     },
     body: JSON.stringify({
       'model': 'gpt-3.5-turbo',
-      'messages': [{ 'role': 'user', 'content': 'Podaj przepis na ' + inputContent }]
+      'messages': [{ 'role': 'user', 'content': 'Zachowaj się jak Książka kucharska. Podaj nazwę i przepis na ' + inputContent }]
     })
   };
 
